@@ -1,0 +1,20 @@
+2021-06-19 17:26:25,548 - INFO - bertNerNorExample.py - <module> - 208 - {0: 'O', 1: 'B-PRO', 2: 'I-PRO', 3: 'E-PRO', 4: 'S-PRO', 5: 'B-ORG', 6: 'I-ORG', 7: 'E-ORG', 8: 'S-ORG', 9: 'B-CONT', 10: 'I-CONT', 11: 'E-CONT', 12: 'S-CONT', 13: 'B-RACE', 14: 'I-RACE', 15: 'E-RACE', 16: 'S-RACE', 17: 'B-NAME', 18: 'I-NAME', 19: 'E-NAME', 20: 'S-NAME', 21: 'B-EDU', 22: 'I-EDU', 23: 'E-EDU', 24: 'S-EDU', 25: 'B-LOC', 26: 'I-LOC', 27: 'E-LOC', 28: 'S-LOC', 29: 'B-TITLE', 30: 'I-TITLE', 31: 'E-TITLE', 32: 'S-TITLE'}
+2021-06-19 17:26:25,548 - INFO - bertNerNorExample.py - <module> - 210 - Namespace(adam_epsilon=1e-08, bert_dir='../../model_hub/bert-base-case/', data_dir='../data/cner', dropout_prob=0.1, eval_batch_size=12, eval_model=True, gpu_ids='0', log_dir='../logs/', lr=3e-05, max_grad_norm=5, max_seq_len=150, num_tags=33, other_lr=0.0003, output_dir='../checkpoints/', seed=123, swa_start=3, train_batch_size=32, train_epochs=3, warmup_proportion=0.1, weight_decay=0.01)
+2021-06-19 17:26:27,760 - INFO - trainUtils.py - load_model_and_parallel - 87 - Load ckpt from ../checkpoints/bert_nor_c-360/model.pt
+2021-06-19 17:26:30,453 - INFO - trainUtils.py - load_model_and_parallel - 97 - Use single gpu in: ['0']
+2021-06-19 17:26:32,147 - INFO - bertNerNorExample.py - test - 159 -           precision    recall  f1-score   support
+
+     PRO       0.70      0.20      0.31        35
+     ORG       0.77      0.46      0.58       571
+    CONT       1.00      1.00      1.00        28
+    RACE       1.00      0.14      0.25        14
+    NAME       1.00      0.97      0.99       112
+     EDU       0.85      0.81      0.83       115
+     LOC       0.00      0.00      0.00         6
+   TITLE       0.82      0.59      0.69       854
+
+micro-f1       0.83      0.58      0.68      1735
+
+2021-06-19 17:26:32,152 - INFO - trainUtils.py - load_model_and_parallel - 87 - Load ckpt from ../checkpoints/bert_nor_c-360/model.pt
+2021-06-19 17:26:32,394 - INFO - trainUtils.py - load_model_and_parallel - 97 - Use single gpu in: ['0']
+2021-06-19 17:26:32,440 - INFO - bertNerNorExample.py - predict - 184 - {'NAME': [('虞兔良', 0)], 'CONT': [('中国国籍', 20)], 'EDU': [('浙江绍兴人', 34), ('MBA', 45)], 'TITLE': [('中共党员', 40), ('经济师', 49)]}

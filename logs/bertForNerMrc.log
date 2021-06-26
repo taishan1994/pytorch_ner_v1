@@ -1,0 +1,34 @@
+2021-06-19 17:22:50,986 - INFO - bertNerMrcExample.py - <module> - 219 - {'找出PRO': 'PRO', '找出ORG': 'ORG', '找出CONT': 'CONT', '找出RACE': 'RACE', '找出NAME': 'NAME', '找出EDU': 'EDU', '找出LOC': 'LOC', '找出TITLE': 'TITLE'}
+2021-06-19 17:22:53,464 - INFO - trainUtils.py - load_model_and_parallel - 87 - Load ckpt from ../checkpoints/bertMrc-2868/model.pt
+2021-06-19 17:22:56,382 - INFO - trainUtils.py - load_model_and_parallel - 97 - Use single gpu in: ['0']
+2021-06-19 17:23:09,115 - INFO - bertNerMrcExample.py - test - 153 -           precision    recall  f1-score   support
+
+     PRO       0.42      0.31      0.36        35
+     ORG       0.67      0.54      0.60       571
+    CONT       1.00      1.00      1.00        28
+    RACE       0.82      1.00      0.90        14
+    NAME       0.96      0.98      0.97       112
+     EDU       0.89      0.83      0.86       115
+     LOC       1.00      0.67      0.80         6
+   TITLE       0.79      0.60      0.69       854
+
+micro-f1       0.77      0.63      0.69      1735
+
+2021-06-19 17:23:09,147 - INFO - trainUtils.py - load_model_and_parallel - 87 - Load ckpt from ../checkpoints/bertMrc-2868/model.pt
+2021-06-19 17:23:09,386 - INFO - trainUtils.py - load_model_and_parallel - 97 - Use single gpu in: ['0']
+2021-06-19 17:23:09,427 - INFO - bertNerMrcExample.py - predict - 187 - PRO
+2021-06-19 17:23:09,427 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,441 - INFO - bertNerMrcExample.py - predict - 187 - ORG
+2021-06-19 17:23:09,441 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,455 - INFO - bertNerMrcExample.py - predict - 187 - CONT
+2021-06-19 17:23:09,455 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,471 - INFO - bertNerMrcExample.py - predict - 187 - RACE
+2021-06-19 17:23:09,471 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,487 - INFO - bertNerMrcExample.py - predict - 187 - NAME
+2021-06-19 17:23:09,487 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,501 - INFO - bertNerMrcExample.py - predict - 187 - EDU
+2021-06-19 17:23:09,501 - INFO - bertNerMrcExample.py - predict - 192 - [('大专学历', 11)]
+2021-06-19 17:23:09,515 - INFO - bertNerMrcExample.py - predict - 187 - LOC
+2021-06-19 17:23:09,515 - INFO - bertNerMrcExample.py - predict - 192 - []
+2021-06-19 17:23:09,528 - INFO - bertNerMrcExample.py - predict - 187 - TITLE
+2021-06-19 17:23:09,529 - INFO - bertNerMrcExample.py - predict - 192 - [('中共党员', 16), ('高级经济师', 21), ('汉商集团董事长', 27), ('党委副书记', 35)]

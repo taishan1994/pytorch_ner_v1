@@ -1,0 +1,10 @@
+{
+  "PRO": 1,
+  "ORG": 2,
+  "CONT": 3,
+  "RACE": 4,
+  "NAME": 5,
+  "EDU": 6,
+  "LOC": 7,
+  "TITLE": 8
+}

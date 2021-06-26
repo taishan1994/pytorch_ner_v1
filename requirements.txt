@@ -1,0 +1,8 @@
+安装transorfmers会自动安装以下依赖包
+transformers==4.5.0
+sacremoses==0.0.44 
+tokenizers==0.10.2 
+
+同时需要以下包
+torch==1.8.1+cu101
+pytorch-crf==0.7.2
