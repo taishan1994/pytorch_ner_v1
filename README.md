@@ -4,6 +4,13 @@
 - 基于机器阅读理解的命名实体识别：bertNerMrcExample.py
 - 基于span的命名实体识别：bertNerSpanExample.py
 
+# 模型下载
+<a href="https://huggingface.co/bert-base-chinese/tree/main ">pytorch_bert_chinese</a>
+下载好之后将其放置在与pytorch_ner_v1的同级目录下的model_hub/bert-base-case/下<br>
+我自己训练好的模型：<br>
+链接: https://pan.baidu.com/s/1SskVP0TVdya0GzRTwZY8dw <br>
+提取码: et7u 
+
 # 整体结构说明
 --checkpoins：存放保存的模型<br>
 --config：一些配置文件<br>
@@ -31,7 +38,7 @@
 3. 相关的结果会保存在logs文件夹下
 
 # 结果
-bertNerNorExample.py
+### bertNerNorExample.py
 在测试集上：
 ```python
           precision    recall  f1-score   support
@@ -50,7 +57,7 @@ micro-f1       0.83      0.58      0.68      1735
 预测：<br>
 raw_text = "虞兔良先生：1963年12月出生，汉族，中国国籍，无境外永久居留权，浙江绍兴人，中共党员，MBA，经济师。"<br>
 {'NAME': [('虞兔良', 0)], 'CONT': [('中国国籍', 20)], 'EDU': [('浙江绍兴人', 34), ('MBA', 45)], 'TITLE': [('中共党员', 40), ('经济师', 49)]}<br>
-bertNerMrcExample.py
+### bertNerMrcExample.py
 ```python
 -           precision    recall  f1-score   support
 
@@ -68,7 +75,7 @@ micro-f1       0.77      0.63      0.69      1735
 raw_text = "1954年10月出生，大专学历，中共党员，高级经济师，汉商集团董事长、党委副书记。"<br>
 预测：<br>
 [('中共党员', 16), ('高级经济师', 21), ('汉商集团董事长', 27), ('党委副书记', 35)]<br>
-bertNerSpanExample.py
+### bertNerSpanExample.py
 ```python
 -           precision    recall  f1-score   support
 
@@ -85,4 +92,6 @@ micro-f1       0.76      0.58      0.66      1735
 ```
 预测：<br>
 raw_text = "顾建国先生：研究生学历，正高级工程师，现任本公司董事长、马钢(集团)控股有限公司总经理。"<br>
-{'NAME': [('顾建国', 0)], 'EDU': [('研究生学历', 6)], 'TITLE': [('正高级工程师', 12), ('董事长', 24), ('马钢(集团)控股有限公司总经理', 28), ('总经理', 40)], 'ORG': [('本公司', 21)]}
+{'NAME': [('顾建国', 0)], 'EDU': [('研究生学历', 6)], 'TITLE': [('正高级工程师', 12), ('董事长', 24), ('马钢(集团)控股有限公司总经理', 28), ('总经理', 40)], 'ORG': [('本公司', 21)]}<br>
+<br>
+仅仅是将一些流程跑通了，也许效果并不是很好。也参考了许多github上的代码，在这里表示感谢。
